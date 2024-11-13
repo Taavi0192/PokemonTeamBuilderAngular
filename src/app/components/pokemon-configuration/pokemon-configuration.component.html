@@ -1,0 +1,51 @@
+<div class="container">
+  <h1 class="h1">Configure Pokémon</h1>
+  <div class="pokemon-info">
+    <h2 class="poke-name-text">{{ pokemonName }}</h2>
+  </div>
+
+  <div class="form-group">
+    <label for="hp">HP:</label>
+    <input type="number" id="hp" class="input" [(ngModel)]="pokemonStats.hp" />
+  </div>
+  <div class="form-group">
+    <label for="attack">Attack:</label>
+    <input type="number" id="attack" class="input" [(ngModel)]="pokemonStats.attack" />
+  </div>
+  <div class="form-group">
+    <label for="defense">Defense:</label>
+    <input type="number" id="defense" class="input" [(ngModel)]="pokemonStats.defense" />
+  </div>
+  <div class="form-group">
+    <label for="speed">Speed:</label>
+    <input type="number" id="speed" class="input" [(ngModel)]="pokemonStats.speed" />
+  </div>
+
+  <div class="form-group">
+    <label for="move1">Move 1:</label>
+    <input type="text" id="move1" class="input" [(ngModel)]="pokemonMoves.move1" />
+  </div>
+  <div class="form-group">
+    <label for="move2">Move 2:</label>
+    <input type="text" id="move2" class="input" [(ngModel)]="pokemonMoves.move2" />
+  </div>
+  <div class="form-group">
+    <label for="move3">Move 3:</label>
+    <input type="text" id="move3" class="input" [(ngModel)]="pokemonMoves.move3" />
+  </div>
+  <div class="form-group">
+    <label for="move4">Move 4:</label>
+    <input type="text" id="move4" class="input" [(ngModel)]="pokemonMoves.move4" />
+  </div>
+
+  <div class="poke-details">
+    <h2 class="h2">Moves</h2>
+    <ul>
+      <li *ngFor="let move of moves">{{ move }}</li>
+    </ul>
+  </div>
+
+  <div class="form-group">
+    <button class="button" (click)="saveConfiguration()">Save Configuration</button>
+  </div>
+</div>
